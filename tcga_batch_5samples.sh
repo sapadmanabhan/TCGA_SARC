@@ -13,12 +13,12 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # USER CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
-MANIFEST=/path/to/manifest.txt
-TOKEN=/path/to/token.txt
+MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-23.155715.txt
+TOKEN=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/token.txt
 N_PARALLEL=4                    # gdc-client parallel streams
 
 # Root dirs — each pipe writes into its own subdirectory
-BASE=/pedigree2/projects/sahaana/TCGA_SARC
+BASE=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs
 PIPA_DIR="$BASE/Downloads"      # PipeA output (raw BAMs land here)
 PIPB_DIR="$BASE/Downsampled"    # PipeB output (.DS.bam files land here)
 PIPC_DIR="$BASE/Outputs"        # PipeC output (AmpliconSuite results per sample)
@@ -27,7 +27,7 @@ PIPEA_SCRIPT=/path/to/gdc_download_pipeA.sh
 PIPEB_SCRIPT=/path/to/downsample_pipeB.sh
 PIPEC_SCRIPT=/path/to/ampsuite_pipeC.sh
 
-DOWNSAMPLE_SCRIPT=/path/to/downsample_bam.py
+DOWNSAMPLE_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/Downsample.py
 DOWNSAMPLE_TARGET=10.0
 
 AMPSUITE=/path/to/AmpliconSuite-pipeline.py
