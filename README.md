@@ -7,5 +7,4 @@ submit_all_batches.sh
      ├─ PipeB (downsample_pipeB.sh) — poll loop, wakes up as PipeA .done markers appear. Downsamples bams to 10X coverage, then deletes full bams
      
      
-     
      └─ PipeC (ampsuite_pipeC.sh) — poll loop, wakes up as PipeB .done markers appear. Runs AA and AC on downsampled bams
