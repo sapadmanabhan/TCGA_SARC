@@ -110,11 +110,15 @@ process_one_uuid() {
 
   echo "[RUN] AmpliconSuite: $sample_name ($ds_bam)"
 
-  if python "$ampsuite_script" \
-      -s "$sample_name" \
-      -t "$np" \
-      -o "$sample_outdir" \
-      --bam "$ds_bam"; then
+AS=/home/sapadmanabhan/AmpliconSuite-pipeline/AmpliconSuite-pipeline.py
+
+  if python $AS \
+	-s “${sample_name}" -t ${np} -o "${sample_outdir}" \
+	--bam $ds_bam\
+	--ref GRCh38 \
+        --run_AA --run_AC \
+	--cnvkit_dir /home/sapadmanabhan/miniconda3/envs/ampsuite/bin/ \
+	&> "${sample_outdir}/job_out.txt"; then
 
     if ampsuite_finished "$sample_outdir" "$sample_name"; then
       {
