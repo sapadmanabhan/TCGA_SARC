@@ -10,9 +10,9 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Configuration ─────────────────────────────────────────────────────────────
-MANIFEST=/path/to/manifest.txt               # same manifest used by the batch script
-BATCH_SCRIPT=/path/to/tcga_batch_5samples.sh # path to the SLURM batch script
-LOG_DIR=/pedigree2/projects/sahaana/TCGA_SARC/slurm_logs  # where job .out/.err go
+MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-23.155715.txt             
+BATCH_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/tcga_batch_5samples.sh # path to the SLURM batch script
+LOG_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs # where job .out/.err go
 
 BATCH_SIZE=5        # samples per job (change if needed)
 DRY_RUN=false       # set to true or pass --dry-run to preview without submitting
