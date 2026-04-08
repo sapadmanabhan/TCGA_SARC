@@ -23,16 +23,16 @@ PIPA_DIR="$BASE/Downloads"      # PipeA output (raw BAMs land here)
 PIPB_DIR="$BASE/Downsampled"    # PipeB output (.DS.bam files land here)
 PIPC_DIR="$BASE/Outputs"        # PipeC output (AmpliconSuite results per sample)
 
-PIPEA_SCRIPT=/path/to/gdc_download_pipeA.sh
-PIPEB_SCRIPT=/path/to/downsample_pipeB.sh
-PIPEC_SCRIPT=/path/to/ampsuite_pipeC.sh
+PIPEA_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/gdc_download_pipeA.sh
+PIPEB_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/downsample_pipeB.sh
+PIPEC_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/ampsuite_pipeC.sh
 
 DOWNSAMPLE_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/Downsample.py
 DOWNSAMPLE_TARGET=10.0
 
-AMPSUITE=/path/to/AmpliconSuite-pipeline.py
+AMPSUITE=/home/sapadmanabhan/AmpliconSuite-pipeline/AmpliconSuite-pipeline.py
 
-CONDA_SH=/path/to/conda/etc/profile.d/conda.sh
+CONDA_SH=/home/sapadmanabhan/miniconda3/etc/profile.d/conda.sh
 CONDA_ENV=ampsuite
 
 NP=24
