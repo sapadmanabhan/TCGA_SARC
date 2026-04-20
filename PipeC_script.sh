@@ -54,11 +54,9 @@ sample_name=$(basename "$ds_bam" .DS.bam)
 sample_outdir="$out_dir/$sample_name"
 
 # ── Completion helpers ─────────────────────────────────────────────────────────
-ampsuite_finished() {
+seeds_finished() {
   local sdir="$1" sname="$2"
-  ls "${sdir}/${sname}"*"_summary.txt" 2>/dev/null | grep -q . && return 0
-  grep -rql "Job finished\|Pipeline complete\|AmpliconSuite-pipeline complete" \
-    "${sdir}" 2>/dev/null && return 0
+  [[ -f "${sdir}/${sname}_AA_CNV_SEEDS.bed" ]] && return 0
   return 1
 }
 
@@ -100,11 +98,10 @@ if python "$AMPSUITE" \
     -o "$sample_outdir" \
     --bam "$ds_bam" \
     --ref GRCh38 \
-    --run_AA --run_AC \
     --cnvkit_dir "$CNVKIT_DIR" \
     &> "${sample_outdir}/job_out.txt"; then
 
-  if ampsuite_finished "$sample_outdir" "$sample_name"; then
+  if seeds_finished "$sample_outdir" "$sample_name"; then
     {
       cat "${lock_path}/meta"
       echo "finish: $(date -Is)"
