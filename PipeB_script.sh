@@ -103,6 +103,11 @@ if python "$downsample_script" \
     samtools index -@ "$np" "$ds_bam"
   fi
 
+  if [[ ! -f "${ds_bam}.bai" ]]; then
+    log "Indexing DS BAM: $ds_bam"
+    samtools index -@ "$np" "$ds_bam"
+  fi
+
   {
     cat "${lock_path}/meta"
     echo "finish: $(date -Is)"
