@@ -14,7 +14,7 @@ set -euo pipefail
 MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-23.155715.txt
 PIPA_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/Downloads
 PIPB_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/Downsampled
-PIPEB_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/PipeB_script.sh
+PIPEB_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Pipeline/PipeB_script.sh
 DOWNSAMPLE_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/Downsample.py
 
 DOWNSAMPLE_TARGET=10.0
