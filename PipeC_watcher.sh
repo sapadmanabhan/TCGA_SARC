@@ -19,7 +19,7 @@ set -euo pipefail
 MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-23.155715.txt
 PIPB_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/Downsampled
 PIPC_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/AmpliconSuite
-PIPEC_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/PipeC_script.sh
+PIPEC_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Pipeline/PipeC_script.sh
 
 NP=24
 POLL_INTERVAL=30      # seconds between watcher cycles
