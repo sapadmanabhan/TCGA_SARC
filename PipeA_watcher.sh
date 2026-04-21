@@ -18,7 +18,7 @@ set -euo pipefail
 MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-23.155715.txt
 TOKEN=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/token.txt
 PIPA_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/Downloads
-PIPEA_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/PipeA_script.sh
+PIPEA_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Pipeline/PipeA_script.sh
 
 N_PARALLEL=4          # gdc-client parallel streams per download
 MAX_CACHED_BAMS=5     # max BAMs sitting in PIPA_DIR before we pause downloading
