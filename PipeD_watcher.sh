@@ -16,7 +16,7 @@ MANIFEST=/pedigree2/projects/TCGA_SARC/gdc_manifest.TCGA-SARC-WGS_tumor.2026-02-
 PIPB_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/Downsampled
 PIPC_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/AmpliconSuite
 PIPD_DIR=/ribosome/projects/sapadmanabhan/TCGA_SARC/Outputs/AA_AC
-PIPED_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Scripts/PipeD_script.sh
+PIPED_SCRIPT=/ribosome/projects/sapadmanabhan/TCGA_SARC/Pipeline/PipeD_script.sh
 
 POLL_INTERVAL=30
 
